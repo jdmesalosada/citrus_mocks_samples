@@ -1,0 +1,90 @@
+{
+	"id": "a94a99e4-427f-4faa-921e-2e70085d47d8",
+	"name": "Make Soap Calls",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"a9aea72c-bab3-4128-a507-dc98043b9961",
+		"52ee7000-831f-470d-b9c8-cc3ffbda3f93",
+		"7975e982-2fa4-44b6-bdef-91c15bece4c6"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "52ee7000-831f-470d-b9c8-cc3ffbda3f93",
+			"name": "Goodbye Scenario",
+			"url": "http://127.0.01:8080/services/rest/v1/goodbye",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/xml",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "<GoodBye xmlns=\"http://citrusframework.org/schemas/hello\">\n                            Say GoodBye!\n                         </GoodBye>",
+			"headers": "Content-Type: application/xml\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7975e982-2fa4-44b6-bdef-91c15bece4c6",
+			"name": "Hello Scenario",
+			"url": "http://127.0.01:8080/services/rest/v1/simulator/hello?user=julian",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/xml",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "user",
+					"value": "julian",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "<Hello xmlns=\"http://citrusframework.org/schemas/hello\">\n                            Say Hello!\n                         </Hello>",
+			"headers": "Content-Type: application/xml\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a9aea72c-bab3-4128-a507-dc98043b9961",
+			"name": "Default Scenario",
+			"url": "http://127.0.01:8080/services/rest/v1",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
