@@ -4,7 +4,7 @@ import com.consol.citrus.http.message.HttpMessage;
 import com.consol.citrus.simulator.scenario.*;
 import org.springframework.http.HttpStatus;
 
-@Scenario("DEFAULT_SCENARIO")
+/*@Scenario("DEFAULT_SCENARIO")
 public class DefaultScenario extends AbstractSimulatorScenario {
 
     @Override
@@ -14,5 +14,23 @@ public class DefaultScenario extends AbstractSimulatorScenario {
         designer.send()
                 .message(new HttpMessage("Welcome to the Citrus simulator")
                         .status(HttpStatus.OK));
+    }
+}*/
+
+@Scenario("Default")
+public class DefaultScenario extends AbstractSimulatorScenario {
+
+    @Override
+    public void run(ScenarioRunner scenario) {
+        scenario
+                .http()
+                .receive((builder -> builder.post()));
+
+        scenario
+                .http()
+                .send((builder -> builder
+                        .response(HttpStatus.OK)
+                        .payload("<DefaultResponse>This is a default response Julian!</DefaultResponse>"))
+                );
     }
 }
