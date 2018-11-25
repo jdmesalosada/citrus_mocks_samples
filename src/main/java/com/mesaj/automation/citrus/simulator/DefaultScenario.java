@@ -17,6 +17,7 @@ public class DefaultScenario extends AbstractSimulatorScenario {
     }
 }*/
 
+//citrus.simulator.defaultScenario=Default -> application.properties
 @Scenario("Default")
 public class DefaultScenario extends AbstractSimulatorScenario {
 
