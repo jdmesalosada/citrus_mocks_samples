@@ -9,3 +9,4 @@ http://citrusframework.org/citrus-simulator/
 
 Simulator docs:
 https://citrusframework.org/news/2017/09/21/introducing-citrus-simulator/
+https://github.com/citrusframework/citrus-simulator-demo
