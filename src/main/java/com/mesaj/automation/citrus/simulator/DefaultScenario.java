@@ -31,7 +31,6 @@ public class DefaultScenario extends AbstractSimulatorScenario {
                 .http()
                 .send((builder -> builder
                         .response(HttpStatus.OK)
-                        .payload("<DefaultResponse>This is a default response Julian!</DefaultResponse>"))
-                );
+                        .payload("<DefaultResponse>This is a default response Julian!</DefaultResponse>")));
     }
 }

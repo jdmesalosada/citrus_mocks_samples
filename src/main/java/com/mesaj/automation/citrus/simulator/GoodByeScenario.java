@@ -14,6 +14,7 @@ public class GoodByeScenario extends AbstractSimulatorScenario {
 
     @Override
     public void run(ScenarioRunner scenario) {
+
         scenario
                 .http()
                 .receive((builder -> builder
