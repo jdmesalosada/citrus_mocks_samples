@@ -1,12 +1,17 @@
 package com.mesaj.automation.citrus.simulator;
 
 
+import com.consol.citrus.message.Message;
+import com.consol.citrus.message.MessageType;
 import com.consol.citrus.simulator.scenario.AbstractSimulatorScenario;
 import com.consol.citrus.simulator.scenario.Scenario;
 import com.consol.citrus.simulator.scenario.ScenarioRunner;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
+import java.util.Map;
 
 @Scenario("ExtractParameter")
 @RequestMapping(value = "/services/rest/v1/extractParameter", method = RequestMethod.POST)
@@ -40,12 +45,16 @@ public class ExtractParameterScenario extends AbstractSimulatorScenario {
 ;
         * */
 
-        scenario
+       /* scenario
                 .http()
+
                 .send((builder -> builder
-                        .response(HttpStatus.OK)
-                        .extractFromPayload("$.username", "algo")));
+                        .response(HttpStatus.OK).messageType(MessageType.JSON)
+                        .extractFromPayload("$.username", "algo")));*/
         //.payload("{\"version\":\"@username@\"}")));
+
+        scenario.http().send(builder -> builder.response().message()
+                .statusCode(200));
 
     }
 }
