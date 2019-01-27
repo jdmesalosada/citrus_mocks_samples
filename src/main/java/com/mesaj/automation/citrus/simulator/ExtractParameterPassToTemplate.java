@@ -14,9 +14,6 @@ public class ExtractParameterPassToTemplate extends AbstractSimulatorScenario {
     @Override
     public void run(ScenarioRunner scenario) {
 
-        ClassPathResource template = new ClassPathResource("templates/customerAuthenticationGet.xml");
-
-
 /*        scenario
                 .http()
                 .receive(con -> con.post().extractFromPayload("$.id", "id"));
@@ -30,12 +27,13 @@ public class ExtractParameterPassToTemplate extends AbstractSimulatorScenario {
                         .extractFromPayload("$.id", "id")
                 );
 
+
         String message = scenario.getTestContext().getVariable("id");
         System.out.println("variable capturada printed:  " + message);
         //"${id}"
 
         scenario.http().send(builder -> builder.response()
-                .statusCode(200).payload(template));
+                .statusCode(200).payload(new ClassPathResource("templates/customerAuthenticationGet.xml")));
 
     }
 }
