@@ -37,7 +37,7 @@
                     <cus:idType>C</cus:idType>
                     <!--Optional:-->
 
-                    <cus:idNumber>12</cus:idNumber>
+                    <cus:idNumber>${id}</cus:idNumber>
                     <!--Optional:-->
                     <cus:passwordFlag>1</cus:passwordFlag>
                     <!--Optional:-->
