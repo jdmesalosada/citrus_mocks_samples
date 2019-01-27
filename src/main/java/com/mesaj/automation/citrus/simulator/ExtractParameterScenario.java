@@ -53,8 +53,12 @@ public class ExtractParameterScenario extends AbstractSimulatorScenario {
                         .extractFromPayload("$.username", "algo")));*/
         //.payload("{\"version\":\"@username@\"}")));
 
-        scenario.http().send(builder -> builder.response().message()
-                .statusCode(200));
+        scenario
+                .http()
+                .receive(con -> con.post().extractFromPayload("$.username", "userName"));
+
+        scenario.http().send(builder -> builder.response()
+                .statusCode(200).payload("${userName}"));
 
     }
 }
