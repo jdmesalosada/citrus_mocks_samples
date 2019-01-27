@@ -26,4 +26,27 @@ https://github.com/citrusframework/citrus-simulator-demo
 
     <!-- <cus:idNumber>${idNumber}</cus:idNumber>-->
     
+    
+   /*
+    @Override
+       public void run(ScenarioDesigner scenario) {
+           scenario
+               .receive()
+               .payload("<Hello xmlns=\"http://citrusframework.org/schemas/hello\">" +
+                           "<user>@ignore@</user>" +
+                        "</Hello>")
+               .extractFromPayload("/Hello/user", "userName");
+   
+           scenario
+               .send()
+               .payload("<HelloResponse xmlns=\"http://citrusframework.org/schemas/hello\">" +
+                           "<text>Hi there ${userName}!</text>" +
+                        "</HelloResponse>");
+       }
+   */
+   
+   Peticion desde postman: <Hello>
+                                 <user>juliancho</user>
+                           </Hello>
+    
  
