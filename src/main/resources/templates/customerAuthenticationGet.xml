@@ -1,0 +1,65 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://www.colpatria.com/esb/services/sa/customerAuthenticationGet/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <cus:customerAuthenticationGetRs>
+            <!--Optional:-->
+            <cus:responseHeader>
+                <cus:status>
+                    <cus:statusCode>Success</cus:statusCode>
+                    <!--Optional:-->
+                    <cus:statusDesc></cus:statusDesc>
+                    <!--Optional:-->
+                    <!--                <cus:error> -->
+                    <!--                   <cus:origin>?</cus:origin> -->
+                    <!--                   <cus:errorCode>?</cus:errorCode> -->
+                    <!--                   <cus:severity>?</cus:severity> -->
+                    <!--                   <cus:description>?</cus:description> -->
+                    <!--                </cus:error> -->
+                </cus:status>
+                <cus:esbHeader>
+                    <!--Optional:-->
+                    <cus:transactionId>?</cus:transactionId>
+                    <!--Optional:-->
+                    <cus:transactionDate>?</cus:transactionDate>
+                    <!--Optional:-->
+                    <cus:transactionTime>?</cus:transactionTime>
+                    <!--Optional:-->
+                    <cus:numberPages>?</cus:numberPages>
+                    <!--Optional:-->
+                    <cus:totPages>?</cus:totPages>
+                </cus:esbHeader>
+            </cus:responseHeader>
+            <!--Optional:-->
+            <cus:authenticationGetRs>
+                <!--Optional:-->
+                <cus:user>
+                    <!--Optional:-->
+                    <cus:idType>C</cus:idType>
+                    <!--Optional:-->
+
+                    <cus:idNumber>12</cus:idNumber>
+                    <!--Optional:-->
+                    <cus:passwordFlag>1</cus:passwordFlag>
+                    <!--Optional:-->
+                    <cus:channelRegister>?</cus:channelRegister>
+                    <!--Optional:-->
+                    <cus:customerName>Carolina Francisca</cus:customerName>
+                    <!--Optional:-->
+                    <cus:segmentCode>?</cus:segmentCode>
+                    <!--Optional:-->
+                    <cus:promoterCode>?</cus:promoterCode>
+                    <!--Optional:-->
+                    <cus:branchCode>?</cus:branchCode>
+                    <!--Optional:-->
+                    <cus:emailAddress1>londojho@colpatria.com</cus:emailAddress1>
+                    <!--Optional:-->
+                    <cus:emailAddress2>londojho@colpatria.com</cus:emailAddress2>
+                    <!--Optional:-->
+                    <cus:celularPhone1>3184149345</cus:celularPhone1>
+                    <!--Optional:-->
+                    <cus:celularPhone2>3184149345</cus:celularPhone2>
+                </cus:user>
+            </cus:authenticationGetRs>
+        </cus:customerAuthenticationGetRs>
+    </soapenv:Body>
+</soapenv:Envelope>

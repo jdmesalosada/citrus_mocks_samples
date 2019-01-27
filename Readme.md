@@ -17,3 +17,5 @@ https://citrusframework.org/samples/cucumber/
 Simulator docs:
 https://citrusframework.org/news/2017/09/21/introducing-citrus-simulator/
 https://github.com/citrusframework/citrus-simulator-demo
+
+    <!-- <cus:idNumber>${idNumber}</cus:idNumber>-->
